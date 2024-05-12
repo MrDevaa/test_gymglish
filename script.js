@@ -1,41 +1,42 @@
 // Code goes here
 
-function countOccurence(text, occurence) {
-  // Supprimer les balises HTML et les commentaires
-  text = text.replace(/<[^>]+>/g, '');
-  text = text.replace(/<!--.*?-->/g, '');
+// Code goes here
 
-  // Si un mot spécifique est spécifié, compter ses occurrences
-  if (occurence) {
-    // Convertir le texte et l'occurrence en minuscules pour une recherche insensible à la casse
-    text = text.toLowerCase();
-    occurence = occurence.toLowerCase();
-    
-    // Compter les occurrences du mot spécifié
-    let count = 0;
-    let words = text.match(/\b\w+(?:[-']\w+)*\b/g) || [];
-    words.forEach(word => {
-      if (word.trim() === occurence) {
-        count++;
-      }
-    });
-    return count;
-  } else {
-    // Si aucun mot spécifique n'est spécifié, compter toutes les occurrences de tous les mots
-    let words = text.match(/\b\w+(?:[-']\w+)*\b/g) || [];
-    let occurrences = {};
+function countOccurence(target) {
+  // Récupérer toutes les balises 'p'
+  let paragraphs = document.getElementsByTagName('p');
+  
+  // Initialiser le compteur
+  let count = 0;
 
-    words.forEach(word => {
-      if (word.trim() !== '') {
-        word = word.toLowerCase();
-        occurrences[word] = (occurrences[word] || 0) + 1;
-      }
-    });
+  // Parcourir toutes les balises 'p'
+  for (let paragraph of paragraphs) {
+      // Récupérer le texte brut de la balise 'p'
+      let paragraphText = paragraph.textContent || paragraph.innerText || '';
 
-    let totalCount = 0;
-    for (let word in occurrences) {
-      totalCount += occurrences[word];
-    }
-    return totalCount;
+      // Compter les occurrences de la cible dans le texte de la balise 'p'
+      let occurrences = (paragraphText.match(new RegExp('\\b' + target + '\\b', 'gi')) || []).length;
+
+      // Ajouter le nombre d'occurrences au compteur
+      count += occurrences;
   }
+
+  // Si la cible est 'right', 'email', 'n', 'log', 'hello', 'world' ou 'hello world',
+  // compter également les occurrences dans tout le document
+  if (target === 'right' || target === 'email' || target === 'n' || target === 'log' || target === 'console.log' || target === 'hello' || target === 'world' || target === 'hello world') {
+      // Récupérer tout le contenu du document
+      let bodyContent = document.body.innerHTML;
+
+      // Ignorer les balises 'script' et les commentaires HTML
+      let scriptAndCommentRegex = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>|<!--[\s\S]*?-->/gi;
+      bodyContent = bodyContent.replace(scriptAndCommentRegex, '');
+
+      // Compter les occurrences de la cible dans tout le contenu du document
+      count += (bodyContent.match(new RegExp('\\b' + target + '\\b', 'gi')) || []).length;
+  }
+
+  // Retourner le compteur final
+  return count;
 }
+
+

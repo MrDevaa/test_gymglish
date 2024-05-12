@@ -3,9 +3,12 @@
 
 <head>
 	<title>Hello world</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.9.0/chai.js"></script>    
+	<link data-require="mocha@*" data-semver="1.13.0" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.css"
+	/>
+	<script data-require="mocha@*" data-semver="1.13.0" src="//cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.js">
+	</script>
+	<script data-require="mocha-chai@1.9.0" data-semver="1.9.0" src="//cdnjs.cloudflare.com/ajax/libs/chai/1.9.0/chai.js">
+	</script>
 	<link rel="stylesheet" href="style.css" />
 </head>
 
@@ -49,8 +52,13 @@
 
 	<script src="script.js"></script>
 	<div id="mocha"></div>
-	<script> mocha.setup('bdd') </script>
-	<script src="test.js"> </script>
-	<script> mocha.run() </script>
+	<script>
+		mocha.setup('bdd')
+	</script>
+	<script src="test.js">
+	</script>
+	<script>
+		mocha.run()
+	</script>
 </body>
 </html>
