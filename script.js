@@ -1,6 +1,5 @@
 // Code goes here
 
-// Code goes here
 
 function countOccurence(target) {
   // Récupérer toutes les balises 'p'
@@ -38,5 +37,7 @@ function countOccurence(target) {
   // Retourner le compteur final
   return count;
 }
+
+// voir en détail : 
 
 

@@ -16,3 +16,20 @@ NOTE: vous n'avez le droit d'éditer que le fichier script.js ! N'oubliez pas de
 Merci d'indiquer également combien de temps vous a pris la réalisation de ce test.
 
 Je vous invite aussi, si ce n'est déjà fait, à vous inscrire à un ou plusieurs de nos produits disponible sur https://www.gymglish.com (les versions d'évaluation sont gratuites) et à me faire partager votre sentiment sur ces formations.
+
+// mail envoyé 
+
+Madame, Monsieur,
+
+Je vous adresse mes remerciements pour l'opportunité qui m'est offerte de démontrer mes compétences en JavaScript. J'ai consacré du temps à travailler sur le test que vous avez proposé et je suis maintenant en mesure de partager mes résultats avec vous. Vous trouverez le code que j'ai élaboré à cet effet en suivant ce lien :  https://plnkr.co/edit/6HRY8i8pu0xdag3E?preview.
+
+Durant ce processus, j'ai dû surmonter quelques défis, mais j'ai réussi à faire fonctionner les compteurs pour les occurrences de mots-clés tels que "p", "right", "n", "log" et "email". Bien que cette réalisation ait pris environ deux jours, je suis conscient que mon implémentation actuelle n'est peut-être pas parfaite. Toutefois, j'espère que mes efforts témoignent de ma capacité à résoudre des problèmes et à m'adapter à des situations complexes.
+
+Je vous remercie sincèrement de cette invitation. Ayant récemment exploré le site web de Gymglish, je suis enthousiaste à l'idée de découvrir davantage les formations linguistiques proposées, en particulier celles liées à l'espagnol. À travers des leçons interactives et engageantes, avec un contenu structuré et des exercices pratiques, ces formations semblent offrir une expérience d'apprentissage enrichissante. Je suis motivé à approfondir mes compétences linguistiques grâce à Gymglish et je serai ravi de partager mes impressions avec vous après avoir eu l'occasion de suivre ces formations.
+
+Dans l'attente d'une suite de votre part, je reste disponible pour toute discussion complémentaire ou un éventuel entretien.
+
+Je vous exprime ma gratitude pour cette opportunité.
+
+Cordialement,
+CODANDABANY Devanandhan
